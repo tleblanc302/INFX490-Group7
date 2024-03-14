@@ -1,0 +1,44 @@
+<!-- view-inventory.component.html -->
+
+<div class="search-bar">
+    <h2>Search by Customer Number, Phone Number, or Last Name: </h2>
+    <input type="text">
+    <button>Search</button>
+    <br><br>
+  </div>
+  
+  <table class="inventory-table">
+    <thead>
+      <tr>
+        <th>Customer ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Street Addr. 1</th>
+        <th>Apt. No.</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zipcode</th>
+        <th>Birthdate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Populate table rows dynamically using Angular -->
+      <tr *ngFor="let customer of customers">
+        <td>{{ customer.customerID }}</td>
+        <td>{{ customer.firstName }}</td>
+        <td>{{ customer.lastName }}</td>
+        <td>{{ customer.phoneNumber }}</td>
+        <td>{{ customer.email }}</td>
+        <td>{{ customer.streetAddr1 }}</td>
+        <td>{{ customer.aptNo }}</td>
+        <td>{{ customer.city }}</td>
+        <td>{{ customer.state }}</td>
+        <td>{{ customer.zipcode }}</td>
+        <td>{{ customer.birthdate }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+
